@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Plus, X } from "lucide-react"
@@ -11,6 +12,13 @@ interface ProjectSidebarProps {
 }
 
 export function ProjectSidebar({ isOpen, onClose }: ProjectSidebarProps) {
+  useEffect(() => {
+    if (!isOpen) {
+      const toggleButton = document.querySelector<HTMLElement>("[data-sidebar-toggle]")
+      toggleButton?.focus()
+    }
+  }, [isOpen])
+
   return (
     <>
       <div
@@ -28,6 +36,7 @@ export function ProjectSidebar({ isOpen, onClose }: ProjectSidebarProps) {
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
         aria-hidden={!isOpen}
+        inert={!isOpen}
       >
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between border-b border-border-default px-4 py-4">

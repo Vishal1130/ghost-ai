@@ -29,7 +29,7 @@ export function DialogPattern({
 
       <div className="space-y-6">{children}</div>
 
-      {footer ? (
+      {footer !== null && footer !== undefined && footer !== false && footer !== "" ? (
         <footer className="mt-6 rounded-2xl border-t border-border-default bg-bg-subtle/80 px-4 py-4 text-right">
           {footer}
         </footer>
