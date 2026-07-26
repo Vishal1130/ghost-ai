@@ -1,4 +1,3 @@
-# Progress Tracker
 
 Update this file after every meaningful implementation
 change.
@@ -17,14 +16,16 @@ change.
 - Added the requested shadcn components: Button, Card, Dialog, Input, Tabs, Textarea, and ScrollArea.
 - Created a reusable cn() helper in lib/utils.ts.
 - Configured dark-only theme tokens in app/globals.css to align with the Ghost AI palette.
+- Added editor shell components for the navbar, project sidebar, and a reusable dialog pattern.
 
 ## In Progress
 
-- Verifying that the generated UI primitives compile cleanly and import without errors.
+- Verifying the editor shell implementation compiles cleanly and is ready for app integration.
 
 ## Next Up
 
-- Use the new primitives in app-level UI once the feature surfaces are built.
+- Integrate the editor navbar and project sidebar into the home page layout.
+- Extend the dialog pattern with actual dialog composition when needed.
 
 ## Open Questions
 
